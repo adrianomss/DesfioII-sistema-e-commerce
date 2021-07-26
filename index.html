@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-r" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!---Mobile first----------------------------------------------->
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/funcoes.js"></script>
+    <!-- Favicon––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Titulo––––––––––––––––––––––––––––––––––––––––––––––––––--->
+    <title>Cadastro - Produtos e Clientes</title>
+</head>
+
+<body>
+    <!-- Tenho uma div com lables e input´s -->
+    <div class="container">
+        <div class="title">Cadastre-se</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Nome completo </span>
+                        <input id="nome" type="text" placeholder="seu nome" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input id="email" type="text" placeholder="seu melhor email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Telefone</span>
+                        <input id="telefone" type="text" placeholder="seu principal numero" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Crie uma senha </span>
+                        <input id="senha" type="text" placeholder="senha" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirme sua senha</span>
+                        <input type="text" placeholder="confirme" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Quer ser notificado das nossas promoções ?</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Sim</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Não</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Envie-me pelo whatsap</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Enviar" onclick="salvarForm()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">Cadastro Produtos</div>
+        <div class="prod" onload="carregarTotalEstoque('totalEstoque')">
+            <!--Carrinho de compras-->
+            <div>
+                <img src="img/carrinhoCompras.png">
+                <p id="span-p">Itens no estoque: <span id="totalEstoque" value="totalEstoque">0</p>
+                </span>
+            </div>
+        </div>
+        <div class="content">
+            <form action="#">
+                <!--Formulário: Nome, código e quantidade de produtos-->
+                <form>
+                    <span id="span-p">Cadastro de novos produtos</span>
+                    <div class="user-details">
+                        <!--Nome do produto-->
+                        <div class="input-box">
+                            <span class="details">Nome do produto:</span>
+                            <input id="txtNomeProduto" type="text">
+                        </div>
+                        <!--Código do produto-->
+                        <div class="input-box">
+                            <span class="details">Código do produto:</span>
+                            <input id="txtCodProduto" type="text">
+                        </div class="input-box">
+                        <!--Quantidade do produto-->
+                        <div>
+                            <span class="details">Quantidade do produto:</span>
+                            <td>
+                                <select class="input-box" id="qtidadeProduto">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                            </td>
+                        </div>
+                        <!--Botoes-->
+                        <div class="button">
+                            <input class="details" type="button" value="Cadastrar" onclick=" validarProduto( 'txtNomeProduto' , 'txtCodProduto' , 'qtidadeProduto' ) ">
+                            <input class="details" type=" button " value=" Ver estoque " class=" input-box " onclick=" window.open( 'verEstoque.html' , '_self' ) ">
+                            <input type=" reset " value=" Limpar ">
+                        </div>
+
+                    </div>
+        </div>
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
