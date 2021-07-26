@@ -4,7 +4,7 @@
 ### Deploy:https://amazing-curie-329dfb.netlify.app
 ## Formulario cadastro cliente
 
-* Há doi componentes front end :
+* Há dois componentes front end :
 * 1º  Cadastro de clientes com salvamento de dados local, que podem ser visualizados no localStorage do Navegador.
 * 2º Cadastro de produtos e visualização dos itens cadastrados ou ja adicionados sendo visualizado em outra tela.Onde uma função chama um arquivo html simples para mostrar os dados.
 
